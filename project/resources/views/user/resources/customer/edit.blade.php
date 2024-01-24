@@ -12,6 +12,7 @@
                 @method('patch')
                 <x-form.element.form-group title="Customer Detail">
                     <x-form.element.input1 name="name" :value="$data['name']" label="Customer Name" required="required" />
+                    <x-form.element.input1 name="gstin" :value="$data['gstin']" label="GSTIN" type="text" />
                     <x-form.element.input1 name="email" :value="$data['email']" label="Customer Email" type="email" />
                     <x-form.element.input1 name="phone" :value="$data['phone']" label="Customer Phone" />
                     <x-form.element.input1 name="address" :value="$data['address']" label="Address" required="required" />

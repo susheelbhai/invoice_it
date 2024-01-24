@@ -10,12 +10,12 @@
 
 /* `invoice_it`.`businesses` */
 $businesses = array(
-  array('id' => '1','created_at' => '2024-01-12 15:45:30','updated_at' => '2024-01-12 15:45:30','name' => 'Digamite Private Limited','email' => 'digamite@hotmail.com','phone' => '7979851485','address' => 'C/O KIRAN DEVI, PANCH-PALASI, VILL-PARASI, P. Chakrdaha','city' => 'Araria','pin' => '854318','state_id' => '10','logo' => NULL,'gstin' => '10AAKCD4337Q1ZF','gst_certificate' => NULL,'registration_number' => 'U62090BR2023PTC066123','registration_certificate' => NULL,'iec_code' => NULL,'ad_code' => NULL,'arn_code' => NULL,'bank_name' => 'Canara Bank', 'bank_ifsc' => 'CNRB0004567', 'bank_swift' => NULL,'bank_account_number' => '120026808473','bank_account_holder_name' => 'DIGAMITE PRIVATE LIMITED','payment_terms' => NULL)
+  array('id' => '1','created_at' => '2024-01-12 15:45:30','updated_at' => '2024-01-12 15:45:30','name' => 'Digamite Private Limited','email' => 'digamite@hotmail.com','phone' => '7979851485','address' => 'C/O KIRAN DEVI, PANCH-PALASI, VILL-PARASI, P. Chakrdaha','city' => 'Araria','pin' => '854318','state_id' => '10','logo' => NULL,'gstin' => '10AAKCD4337Q1ZF','gst_certificate' => NULL,'registration_number' => 'U62090BR2023PTC066123','registration_certificate' => NULL,'iec_code' => NULL,'ad_code' => NULL,'arn_code' => NULL,'bank_name' => 'Canara Bank','bank_ifsc' => 'CNRB0004567','bank_swift' => 'CNRBINBBBFD','bank_account_number' => '120026808473','bank_account_holder_name' => 'DIGAMITE PRIVATE LIMITED','payment_terms' => NULL)
 );
 
 /* `invoice_it`.`customers` */
 $customers = array(
-  array('id' => '1','created_at' => '2024-01-12 14:49:41','updated_at' => '2024-01-12 14:49:41','gender_id' => '1','business_id' => '1','name' => 'Biotronik Medical Devices India Private Limited', 'gstin' => '07AADCB1386Q1Z8', 'email' => 'praveen.singla@biotronik.com','phone' => '9871592929','address' => 'Unit No.805-807, DLF Tower2B Commercial Complex, Jasola','city' => 'Delhi','pin' => '110025','state_id' => '7')
+  array('id' => '1','created_at' => '2024-01-12 14:49:41','updated_at' => '2024-01-12 14:49:41','gender_id' => '1','business_id' => '1','name' => 'Biotronik Medical Devices India Private Limited','email' => 'praveen.singla@biotronik.com','phone' => '9871592929','address' => 'Unit No.805-807, DLF Tower2B Commercial Complex, Jasola','city' => 'Delhi','pin' => '110025','state_id' => '7','gstin' => '07AADCB1386Q1Z8')
 );
 
 /* `invoice_it`.`failed_jobs` */
@@ -24,7 +24,6 @@ $failed_jobs = array(
 
 /* `invoice_it`.`invoices` */
 $invoices = array(
-  array('id' => '1','created_at' => '2024-01-13 10:57:55','updated_at' => '2024-01-13 10:57:55','business_id' => '1','business_gstin' => '10AAKCD4337Q1ZF','business_name' => 'Digamite Private Limited','business_email' => 'digamite@hotmail.com','business_phone' => '7979851485','business_address' => 'C/O KIRAN DEVI, PANCH-PALASI, VILL-PARASI, P. Chakrdaha','business_city' => 'Araria','business_pin' => '854318','business_state_id' => '10','customer_id' => '1','customer_gstin' => NULL,'customer_name' => 'Biotronik Medical Devices India Private Limited','customer_email' => 'praveen.singla@biotronik.com','customer_phone' => '9871592929','customer_address' => 'Unit No.805-807, DLF Tower2B Commercial Complex, Jasola','customer_city' => 'Delhi','customer_pin' => '110025','customer_state_id' => '7')
 );
 
 /* `invoice_it`.`invoice_payments` */
@@ -33,7 +32,6 @@ $invoice_payments = array(
 
 /* `invoice_it`.`invoice_products` */
 $invoice_products = array(
-  array('id' => '1','created_at' => '2024-01-13 10:57:55','updated_at' => '2024-01-13 10:57:55','invoice_id' => '1','name' => 'Maintenance of E-Spandan Website', 'hsn_code'=> 998314,'description' => 'For the moth of','sale_price' => '20000','quantity' => '1','gst_percentage' => '18')
 );
 
 /* `invoice_it`.`migrations` */
@@ -63,7 +61,8 @@ $personal_access_tokens = array(
 
 /* `invoice_it`.`products` */
 $products = array(
-  array('id' => '1','created_at' => '2024-01-12 15:10:11','updated_at' => '2024-01-12 15:10:11','business_id' => '1','sku' => 'espandan','name' => 'Maintenance of E-Spandan Website', 'hsn_code'=> 998314,'description' => 'For the moth of','sale_price' => '20000','quantity' => '1','gst_percentage' => '18')
+  array('id' => '1','created_at' => '2024-01-12 15:10:11','updated_at' => '2024-01-12 15:10:11','business_id' => '1','sku' => '1','name' => 'Maintenance of Website','hsn_code' => '998314','description' => 'Maintenance of _____________ website for the moth of January 2024','sale_price' => '20000','quantity' => '1','gst_percentage' => '18'),
+  array('id' => '2','created_at' => '2024-01-12 15:10:11','updated_at' => '2024-01-12 15:10:11','business_id' => '1','sku' => '2','name' => 'Vulnerability Assessment','hsn_code' => '998319','description' => 'Vulnerability Assessment of ____________ Website','sale_price' => '33850','quantity' => '1','gst_percentage' => '18')
 );
 
 /* `invoice_it`.`states` */
@@ -90,7 +89,7 @@ $themes = array(
 
 /* `invoice_it`.`users` */
 $users = array(
-  array('id' => '1','created_at' => '2024-01-13 10:57:26','updated_at' => '2024-01-13 10:57:26','business_id' => '1','name' => 'Susheel Singh','email' => 'susheelkrsingh306@gmail.com','phone' => NULL,'designation' => 'Owner','remember_token' => 'qG8KvdDyXv','profile_pic' => NULL,'email_verified_at' => '2024-01-13 10:57:25','password' => '$2y$12$BXVFNfN5YvzQ2nCSbMcbIuKHlsjZvgDA8kMxBs5J/VpZj0JH1VX0u','gender_id' => '1','theme_id' => '1','color1' => '1','color2' => '1','color3' => '1')
+  array('id' => '1','created_at' => '2024-01-21 08:09:47','updated_at' => '2024-01-21 08:09:47','business_id' => '1','name' => 'Susheel Singh','email' => 'susheelkrsingh306@gmail.com','phone' => NULL,'designation' => 'Owner','remember_token' => '37La0xnoQu','profile_pic' => NULL,'email_verified_at' => '2024-01-21 08:09:47','password' => '$2y$12$xf/7tBe0yvuiM7LATtOluesup1N6E9AUNUeCwYvgVqZPmKeEA/DzK','gender_id' => '1','theme_id' => '1','color1' => '1','color2' => '1','color3' => '1')
 );
 
 /* `invoice_it`.`user_genders` */

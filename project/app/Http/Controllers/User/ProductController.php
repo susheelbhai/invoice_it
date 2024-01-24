@@ -32,6 +32,7 @@ class ProductController extends Controller
         Product::updateOrCreate([
             'sku' => $request->sku,
             'name' => $request->name,
+            'hsn_code' => $request->hsn_code,
             'description' => $request->description,
             'sale_price' => $request->sale_price,
             'quantity' => $request->quantity,
@@ -62,6 +63,7 @@ class ProductController extends Controller
             [
                 'sku' => $request->sku,
                 'name' => $request->name,
+                'hsn_code' => $request->hsn_code,
                 'description' => $request->description,
                 'sale_price' => $request->sale_price,
                 'quantity' => $request->quantity,

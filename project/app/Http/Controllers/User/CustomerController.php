@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Session;
 class CustomerController extends Controller
 {
     public $business_id;
-    public function __construct() {
-       
+    public function __construct()
+    {
     }
     public function index()
     {
@@ -39,6 +39,7 @@ class CustomerController extends Controller
     {
         Customer::updateOrCreate([
             'name' => $request->name,
+            'gstin' => $request->gstin,
             'email' => $request->email,
             'phone' => $request->phone,
             'address' => $request->address,
@@ -48,7 +49,6 @@ class CustomerController extends Controller
             'business_id' => Auth::guard('user')->user()->business_id,
         ]);
         return redirect()->route('customer.index')->with('success', 'New customer added successfully');
-
     }
 
     /**
@@ -78,9 +78,10 @@ class CustomerController extends Controller
     public function update(CustomerRequest $request, string $id)
     {
         Customer::updateOrCreate(
-            ['id'=>$id],
+            ['id' => $id],
             [
                 'name' => $request->name,
+                'gstin' => $request->gstin,
                 'email' => $request->email,
                 'phone' => $request->phone,
                 'address' => $request->address,

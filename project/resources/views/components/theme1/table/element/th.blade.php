@@ -1,3 +1,3 @@
-<th colspan="{{ $colspan }}">
+<th colspan="{{ $colspan }}"  {{ $attributes }}>
     {{ $data2 ?? '' }}
 </th>

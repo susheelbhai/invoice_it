@@ -11,6 +11,7 @@
             <x-form.type.standard title="Create Customer" action="{{ route('customer.store') }}">
                 <x-form.element.form-group title="Customer Detail">
                     <x-form.element.input1 name="name" label="Customer Name" required="required" />
+                    <x-form.element.input1 name="gstin" label="GSTIN" type="text" />
                     <x-form.element.input1 name="email" label="Customer Email" type="email" />
                     <x-form.element.input1 name="phone" label="Customer Phone" />
                     <x-form.element.input1 name="address" label="Address" required="required" />

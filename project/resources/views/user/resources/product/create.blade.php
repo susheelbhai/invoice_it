@@ -11,6 +11,7 @@
             <x-form.type.standard title="Create Product" action="{{ route('product.store') }}">
                 <x-form.element.form-group title="Product Detail">
                     <x-form.element.input1 name="sku" label="Product SKU" required="required" />
+                    <x-form.element.input1 name="hsn_code" label="HSN Code" required="required" />
                     <x-form.element.input1 name="name" label="Product Name" required="required" />
                     <x-form.element.input1 name="description" label="Description" />
                     <x-form.element.input1 name="sale_price" label="Sale Price" type="number" required="required" />

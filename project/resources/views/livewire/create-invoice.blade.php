@@ -47,8 +47,9 @@
     <div class="col-lg-12">
         <x-form.type.standard title="Add Product">
             <x-form.element.form-group title="Product Detail">
-                <x-form.element.input1 name="product" label="Select Product" wire:model.live="sku" />
+                <x-form.element.input1 type="select" name="product" label="Select Product" :options="$products" wire:model.live="sku" />
                 <x-form.element.input1 name="name" label="Title" required="required" wire:model="product.name" />
+                <x-form.element.input1 name="hsn_code" label="HSN Code" required="required" wire:model="product.hsn_code" />
                 <x-form.element.input1 name="description" label="Description" wire:model="product.description" />
                 <x-form.element.input1 name="sale_price" label="Sale Price" type="number" required="required" wire:model="product.sale_price" />
                 <x-form.element.input1 name="quantity" label="Quantity" required="required" wire:model="quantity" />

@@ -12,6 +12,9 @@
     <link href="{{ asset('themes/theme1') }}/css/style.css" rel="stylesheet">
     <link href="{{ asset('themes/theme1') }}/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 	{{ $head }}
+
+    <!-- Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
 

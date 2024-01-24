@@ -1,6 +1,10 @@
 <x-table.element.tr>
-    <x-table.element.th data="Customer Name" />Owner
+    <x-table.element.th data="Customer Name" />
     <x-table.element.td :data="$data2['name']" />
+</x-table.element.tr>
+<x-table.element.tr>
+    <x-table.element.th data="GSTIN" />
+    <x-table.element.td :data="$data2['gstin']" />
 </x-table.element.tr>
 <x-table.element.tr>
     <x-table.element.th data="Customer Email" />

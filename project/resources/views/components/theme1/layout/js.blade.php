@@ -24,3 +24,16 @@
 
 <script src="{{ asset('themes/theme1') }}/vendor/datatables/js/jquery.dataTables.min.js"></script>
 <script src="{{ asset('themes/theme1') }}/js/plugins-init/datatables.init.js"></script>
+
+<!-- Select2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script>
+  $(".select2_single").select2({
+      placeholder: "Select ...",
+      allowClear: true
+  });
+  $(".select2_multiple").select2({
+      placeholder: "Select ...",
+      allowClear: true
+  });
+</script>

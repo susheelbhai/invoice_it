@@ -7,6 +7,10 @@
     <x-table.element.td :data="$data2['name']" />
 </x-table.element.tr>
 <x-table.element.tr>
+    <x-table.element.th data="HSN Code" />
+    <x-table.element.td :data="$data2['hsn_code']" />
+</x-table.element.tr>
+<x-table.element.tr>
     <x-table.element.th data="Product Description" />
     <x-table.element.td :data="$data2['description']" />
 </x-table.element.tr>
