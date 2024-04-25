@@ -75,11 +75,14 @@ class CreateInvoice extends Component
     }
 
     public function submit(){
-        $date = Carbon::now();
-        // dd($this->business_detail['state']['gst_state_short_name']);
+         $date = Carbon::now();
+        //  dd($date);
+        $invoice_count = Helper::invoiceCount($date);
+        // dd($data);
         $invoice = Invoice::create(
             [
                 'business_id' => 1,
+                'serial_number' => $invoice_count+1,
                 
                 'invoice_date' => Carbon::now(),
                 'customer_id' => $this->customer_detail['id'],

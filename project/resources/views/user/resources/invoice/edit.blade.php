@@ -2,13 +2,13 @@
     <x-slot name="head">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title> Edit Invoice Application | {{ config('app.name') }}</title>
+        <title> Edit Invoice Detail | {{ config('app.name') }}</title>
     </x-slot>
 
     <section class="content">
         <div class="container-fluid">
 
-            <x-form.type.standard title="Edit Invoice Application" action="{{ route('invoice.update', $data['id']) }}">
+            <x-form.type.standard title="Edit Invoice Detail" action="{{ route('invoice.update', $data['id']) }}">
                 @method('patch')
                 <x-form.element.form-group title="Customer Detail">
                     <x-form.element.input1 name="customer_name" :value="$data['customer_name']" label="Name" required="required" />

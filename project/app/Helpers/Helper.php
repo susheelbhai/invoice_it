@@ -2,12 +2,14 @@
 
 namespace App\Helpers;
 
+use App\Models\Invoice;
+
 class Helper
 {
     public static function invoiceNumber($data)
         {
             $financial_year = self::financial_year(date_create($data['invoice_date']));
-            return $data['state_code'] . $financial_year * 1000000 + $data['id'];
+            return  $financial_year * 1000000 + $data['serial_number'];
         }
     
     public static function productDetailUrl3($i){
@@ -50,7 +52,6 @@ class Helper
     {
         $amount = (1-$sale_price/$mrp)*100;
        
-
         echo round($amount,2)." %";
     }
 
@@ -115,21 +116,35 @@ class Helper
         $result = implode('', $str);
         $paise = ($point > 0) ? "and " . ($words[(int)($point / 10) * 10] . " " . $words[$point % 10]) . ' Paise' : '';
 
-
         $amount_in_word = $result . "Rupees " . $paise . " only";
         return ucwords($amount_in_word);
     }
     
+    public static function invoiceCount($data) {
+        $date = date_create($data);
+        // $date = date_create('2023-03-01');
+        if (date_format($date, "m") >= 4) {
+            $start_date = (date_format($date, 'Y')) . '-04-01';
+            $end_date = (date_format($date, 'Y') + 1) . '-03-31';
+        } else {
+            $start_date = (date_format($date, 'Y') - 1) . '-04-01';
+            $end_date = (date_format($date, 'Y')) . '-03-31';
+        }
+        $count = Invoice::where('invoice_date', '>=', $start_date)
+       ->where('invoice_date', '<=', $end_date)
+       ->count();
+       return $count;
+    }
+
     private static function financial_year($date, $format = "y")
     {
-        if (date_format($date, "m") >= 3) { //On or After April (FY is current year - next year)
+        if (date_format($date, "m") > 3) { //On or After April (FY is current year - next year)
             $financial_year = (date_format($date, $format)) . '' . (date_format($date, $format) + 1);
         } else { //On or Before March (FY is previous year - current year)
             $financial_year = (date_format($date, $format) - 1) . '' . date_format($date, $format);
         }
         return $financial_year;
     }
-
     
 }
 

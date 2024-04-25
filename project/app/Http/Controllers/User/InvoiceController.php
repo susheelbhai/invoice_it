@@ -34,21 +34,6 @@ class InvoiceController extends Controller
         return view('user.resources.invoice.create', compact('states'));
     }
 
-    public function store(Request $request)
-    {
-        Invoice::updateOrCreate([
-            'sku' => $request->sku,
-            'name' => $request->name,
-            'description' => $request->description,
-            'mrp' => $request->mrp,
-            'sale_price' => $request->sale_price,
-            'purchase_price' => $request->purchase_price,
-            'quantity' => $request->quantity,
-            'business_id' => Auth::guard('user')->user()->business_id,
-        ]);
-        return redirect()->route('invoice.index')->with('success', 'New invoice added successfully');
-    }
-
     public function show(string $id)
     {
         $business_id = Auth::guard('user')->user()->business_id;

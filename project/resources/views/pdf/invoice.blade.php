@@ -205,7 +205,7 @@
                             <table>
                                 <tr>
                                     <th style="width: 40px">CIN </th>
-                                    <td> : {{ $data['customer_gstin'] }}</td>
+                                    <td> : {{ $data['business_cin'] }}</td>
                                 </tr>
                                 <tr>
                                     <th>GSTIN </th>
@@ -411,7 +411,7 @@
                         </td>
                     </tr>
                     <tr style="border: solid">
-                        <td style="width: 70%">
+                        <td style="width: 65%">
 
                             <table id="bank_table">
 
@@ -446,10 +446,9 @@
                         <td style="border: solid">
 
                             <div class="authorised_sign">
+                                <div style="padding-top:100px"> </div>
                                 <h5>For {{ $data['business_name'] }}</h5>
-
-                                <img src="{{ asset('seal3.png') }}" width="72px" style="margin-right: 48px;">
-                                <img src="{{ asset('sign2.png') }}" width="126px" style="margin-top: -14px">
+                                    <br/>
                                 <h5 style="margin-top: -8px">Authorised signatory</h5>
 
                             </div>
